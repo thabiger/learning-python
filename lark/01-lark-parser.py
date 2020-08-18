@@ -40,9 +40,7 @@ class TextToListTransformer(Transformer):
 ast = parser.parse(" ".join(sys.argv[1:]))
 asl = TextToListTransformer().transform(ast)
 
-print(ast.pretty())
-print()
-print(ast)
-print()
-print (asl)
+for p in (ast.pretty(), ast, asl):
+    print ("%s\n\n" % p)
+
 
