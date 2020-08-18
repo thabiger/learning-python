@@ -7,6 +7,8 @@ from lark import Transformer
 # Common grammars can be found here:
 # https://github.com/lark-parser/lark/blob/master/lark/grammars/common.lark
 
+default_string = "Ala has 2 cats. She is a #catlover."
+
 parser = Lark(r"""
 
     doc: phrase+
@@ -37,7 +39,7 @@ class TextToListTransformer(Transformer):
     doc = list
     phrase = list
 
-ast = parser.parse(" ".join(sys.argv[1:]))
+ast = parser.parse(" ".join(sys.argv[1:] or [default_string]))
 asl = TextToListTransformer().transform(ast)
 
 for p in (ast.pretty(), ast, asl):
