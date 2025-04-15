@@ -1,0 +1,9 @@
+example_main_key: example_main_value
+another_main_key: another_main_value
+database:
+  host: localhost
+  port: 5432
+
+database1:
+  host: localhost1
+  port: 5432
