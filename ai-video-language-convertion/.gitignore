@@ -1,0 +1,10 @@
+pretrained_models
+.venv
+.vscode
+__pycache__
+*.pyc
+*.pyo
+*.pyd
+*.pdb
+*.egg-info
+
